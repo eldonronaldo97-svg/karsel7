@@ -127,8 +127,9 @@ try{fbq('track','Purchase',{value:599,currency:'EGP'});}catch(e){}
 await fetch('https://script.google.com/macros/s/AKfycbxe66x12_HTp0wL9q9f0gJ1uBoGQKOWUHSaJZghfUuPUl4qxfxHQMJngGtqD_uv7FvB/exec',{
 method:'POST',
 mode:'no-cors',
-headers:{'Content-Type':'application/json'},
-body:JSON.stringify(data)
+headers:{'Content-Type':'application/x-www-form-urlencoded'},
+body:new URLSearchParams(data)
+
 });
 submitBtn.textContent="✅ تم تأكيد طلبك بنجاح!";
 submitBtn.style.background="#2ecc71";
